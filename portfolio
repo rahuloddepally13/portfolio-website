@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oddepalli Rahul - Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ffafbd, #ffc3a0);
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            text-align: center;
+            color: #0056b3;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #0056b3;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        .project, .certification, .skill {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #e6f0ff;
+            border-radius: 8px;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .project:hover, .certification:hover, .skill:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        .tags {
+            margin-top: 5px;
+        }
+        .tag {
+            display: inline-block;
+            background: #0056b3;
+            color: #fff;
+            padding: 3px 8px;
+            margin: 2px;
+            border-radius: 15px;
+            font-size: 12px;
+        }
+        .project-image {
+            display: none;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .project-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Oddepalli Rahul</h1>
+        <h3>Computer Science Student</h3>
+        <p>Final year student at CMR Institute of Technology, Hyderabad<br>Expected Graduation: May 2025<br>"Aspiring Computer Science graduate with a strong foundation in programming. Passionate about applying innovative solutions to real-world problems, with hands-on experience in academic projects like bone fracture detection and driver eye status surveillance. Eager to contribute and grow in a dynamic, tech-driven environment."</p>
+
+        <div class="section">
+            <h2>📚 Academic Projects</h2>
+            <div class="project" onclick="showImage("C:\Users\rahul\OneDrive\Desktop\prj1\WhatsApp Image 2025-03-10 at 5.17.11 PM.jpeg")">
+                <h3>Bone Fracture Detection Using Deep Learning</h3>
+                <p>Developed an advanced deep learning system for automated bone fracture detection in X-ray images.</p>
+            </div>
+            <div class="project" onclick="showImage('eye-status.jpg')">
+                <h3>Lightweight CNN-Based Driver Eye Status Surveillance</h3>
+                <p>Real-time system to detect whether a driver’s eyes are open or closed, preventing drowsiness-related accidents.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💻 Technical Skills</h2>
+            <div class="skill">Python</div>
+            <div class="skill">Data Structures</div>
+            <div class="skill">SQL</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+        </div>
+
+        <div class="section">
+            <h2>🏅 Certifications</h2>
+            <div class="certification">Basics of Python – Infosys Springboard, 2023</div>
+            <div class="certification">Introduction to Data Science – Infosys Springboard, 2023</div>
+            <div class="certification">
+                Python Internship – Edugene Technologies, 2024
+                
+            </div>
+        </div>
+
+        <div id="project-image" class="project-image">
+            <img id="project-img" src="" alt="Project Image">
+        </div>
+    </div>
+
+    <script>
+        function showImage(image) {
+            const imgElement = document.getElementById('project-img');
+            const imageContainer = document.getElementById('project-image');
+            imgElement.src = image;
+            imageContainer.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
